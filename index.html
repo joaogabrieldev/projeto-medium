@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Medium - Onde boas ideias encontram você!</title>
+    <style>
+        body {
+            position: relative;
+            margin: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .cabecalho {
+            position: fixed;
+            width: 100%;
+            background-color: #BADEFF;
+            border-bottom: 1px solid black;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 1145px;
+            margin: 0 auto;
+            padding: 1.4rem 0;
+
+        }
+
+        #menu {
+            /*
+                Nesse caso poderia ser usado "float: right" para fazer esse mesmo posicionamento, mas essa é uma tecnica obsoleta 
+            */
+
+            display: flex;
+            justify-content: flex-end;
+
+            /* border: 1px solid red; */
+
+            flex-grow: 1;
+            list-style-type: none;
+            margin-left: 20px;
+            padding: 0 25px;
+        }
+
+        #menu li {
+            margin-left: 30px;
+        }
+
+        #menu li a:link,
+        a:visited {
+            color: black;
+            text-decoration: none;
+            transition: color .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        #menu li a:hover {
+            color: #4c799f;
+
+        }
+
+        #menu .botao.destaque {
+            background-color: black;
+            padding: 10px 25px;
+            color: white;
+            border-radius: 20px;
+            margin-right: -5px;
+            transition: background-color .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        #menu .botao.destaque:hover {
+            background-color: rgb(32, 32, 32);
+            color: #BADEFF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cabecalho">
+        <div class="container">
+            <img src="img/logo.svg" width="200" alt="Logo Medium">
+            <ul id="menu">
+                <li><a href="#">Nossa História</a></li>
+                <li><a href="#">Membros</a></li>
+                <li><a href="#">Escrever</a></li>
+                <li><a href="#">Logar</a></li>
+                <li><a class="botao destaque" href="#">Começar</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="principal">
+
+    </div>
+</body>
+
+</html>
