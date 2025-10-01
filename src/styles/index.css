@@ -1,0 +1,275 @@
+@charset "UTF-8";
+
+/* Header Nav */
+@font-face {
+  font-family: "Medium";
+  src: url(src/assets/fonts/GT-Super-Text-Regular-Trial.otf);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.cabecalho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #badeff;
+  border-bottom: 1px solid black;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 1145px;
+  margin: 0 auto;
+  padding: 1.4rem 0;
+}
+
+#menu {
+  /*
+                Nesse caso poderia ser usado "float: right" para fazer esse mesmo posicionamento, mas essa é uma tecnica obsoleta 
+            */
+
+  display: flex;
+  justify-content: flex-end;
+
+  /* border: 1px solid red; */
+
+  flex-grow: 1;
+  list-style-type: none;
+  margin-left: 20px;
+  padding: 0 25px;
+}
+
+#menu li {
+  margin-left: 30px;
+}
+
+#menu li a:link,
+a:visited {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#menu li a:hover {
+  color: #4c799f;
+}
+
+#menu .botao.destaque {
+  background-color: black;
+  padding: 10px 25px;
+  color: white;
+  border-radius: 20px;
+  margin-right: -5px;
+  transition: background-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#menu .botao.destaque:hover {
+  background-color: rgb(32, 32, 32);
+  color: #badeff;
+}
+
+/* Main */
+.principal.destaque {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  background-color: #badeff;
+  border-bottom: 1px solid black;
+
+  padding-top: 150px;
+}
+
+.topo-text {
+  /* background-color: red; */
+  width: 40%;
+  user-select: none;
+}
+
+.topo-text h1 {
+  font-family: "Medium";
+  font-weight: 500;
+  font-size: 5rem;
+}
+
+.topo-text p {
+  margin-top: -40px;
+  font-size: 30px;
+}
+
+.topo-text p span {
+  text-decoration: underline;
+}
+
+.topo-imagem {
+  /* background-color: red; */
+  user-select: none;
+}
+
+.botao-link-topo {
+  display: flex;
+  /* padding: 0 20px; */
+  /* background-color: blue; */
+}
+
+.botao-link-topo a:link,
+a:visited {
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  padding: 12px 25px;
+  border-radius: 22px;
+  border: 1px solid black;
+  transition: all 0.15s ease-out;
+  font-size: 1.2rem;
+}
+
+.botao-link-topo a:hover {
+  background-color: black;
+  color: white;
+}
+
+.conteudo {
+  padding: 60px;
+  margin-bottom: 1px solid black;
+}
+
+.content-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* background-color: red; */
+
+  padding: 0;
+  margin: 0;
+}
+
+.content-title h2 {
+  text-transform: uppercase;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+.content-title img {
+  padding: 13px 0;
+  width: 26px;
+  height: 25px;
+}
+
+.principal-container {
+  /* border: 1px solid black; */
+  padding: 0;
+  margin-left: 6%;
+  margin-bottom: 5%;
+}
+
+.content-topics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 50px;
+  column-gap: 70px;
+}
+
+.topic {
+  display: flex;
+  flex-direction: row;
+  gap: 23px;
+  /* border: 1px solid black; */
+}
+
+.topic-index {
+  font-size: 50px;
+  font-family: "Bebas Neue";
+  color: #d3d3d3;
+}
+
+.topic-index::after {
+  content: ".";
+}
+
+.topic-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.topic-content-title {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.topic-content-title img {
+  width: 20px;
+}
+
+.topic-information {
+  /* background-color: red; */
+  width: 60%;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.content-date {
+  /* background-color: blue; */
+  margin-top: -18px;
+}
+
+.date::after {
+  content: "⏱️";
+  margin-left: 5px;
+}
+
+.footer {
+  width: 100%;
+  position: static;
+  background-color: #badeff;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid black;
+  width: 100%;
+}
+
+.link-profile {
+  position: relative;
+}
+
+.link-profile:link,
+.link-profile:visited {
+  width: max-content;
+  text-decoration: none;
+}
+
+.link-profile::after {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 100%;
+  border-top: 2px solid black;
+  background-color: black;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-out;
+}
+
+.link-profile:hover::after {
+  transform: scaleX(1);
+}
