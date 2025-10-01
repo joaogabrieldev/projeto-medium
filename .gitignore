@@ -1,4 +1,4 @@
 # VSCode 
 /.vscode
 
-/src/fonts/pack
+./src/assets/fonts/pack
