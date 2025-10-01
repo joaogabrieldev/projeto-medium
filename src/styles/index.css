@@ -35,8 +35,10 @@ body {
 
 #menu {
   /*
-                Nesse caso poderia ser usado "float: right" para fazer esse mesmo posicionamento, mas essa é uma tecnica obsoleta 
-            */
+    Nesse caso poderia ser usado "float: right" 
+    para fazer esse mesmo posicionamento, 
+    mas essa é uma tecnica obsoleta 
+*/
 
   display: flex;
   justify-content: flex-end;
