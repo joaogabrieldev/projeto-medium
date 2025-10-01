@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="src/styles/index.css">
     <title>Medium - Onde boas ideias encontram você!</title>
+    <link rel="shortcut icon" href="src/assets/imgs/favicon.ico" type="image/x-icon">
     <style>
+        /* Header Nav */
+        @font-face {
+            font-family: "Medium";
+            src: url(src/assets/fonts/GT-Super-Text-Regular-Trial.otf);
+        }
+
+
         body {
             position: relative;
             margin: 0;
@@ -15,6 +23,9 @@
 
         .cabecalho {
             position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
             width: 100%;
             background-color: #BADEFF;
             border-bottom: 1px solid black;
@@ -74,13 +85,71 @@
             background-color: rgb(32, 32, 32);
             color: #BADEFF;
         }
+
+        /* Main */
+        .principal.content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            background-color: #BADEFF;
+            border-bottom: 1px solid black;
+            padding: 40px;
+            padding-top: 130px;
+        }
+
+        .topo-text {
+            background-color: red;
+            width: 40%;
+
+        }
+
+        .topo-text h1 {
+            font-family: "Medium";
+            font-weight: 500;
+            font-size: 5rem;
+        }
+
+        .topo-text p {
+            margin-top: -40px;
+            font-size: 29px;
+        }
+
+        .topo-text p span {
+            text-decoration: underline;
+        }
+
+        .topo-imagem {
+            background-color: red;
+        }
+
+        .botao-link-topo {
+            display: flex;
+            padding: 0 20px;
+            background-color: blue;
+        }
+        
+        .botao-link-topo a:link, a:visited {
+            background-color: white;
+            text-decoration: none;
+            color: black;
+            padding: 10px 25px;
+            border-radius: 20px;
+            border: 1px solid black;
+            transition: all .15s ease-out;
+        }
+
+        .botao-link-topo a:hover {
+            background-color: black;
+            color: white;
+        }
     </style>
 </head>
 
 <body>
     <div class="cabecalho">
         <div class="container">
-            <img src="img/logo.svg" width="200" alt="Logo Medium">
+            <img src="src/assets/imgs/logo.svg" width="200" alt="Logo Medium">
             <ul id="menu">
                 <li><a href="#">Nossa História</a></li>
                 <li><a href="#">Membros</a></li>
@@ -90,8 +159,19 @@
             </ul>
         </div>
     </div>
-    <div class="principal">
-
+    <div class="principal content">
+        <div class="topo-text">
+            <h1>
+                Medium é um lugar para escrever, ler e se conectar.
+            </h1>
+            <p>É facil e grátis postar suas ideias sobre qualquer tópico e <span>se conectar com milhões de leitores</span></p>
+            <div class="botao-link-topo">
+                <a href="#">Comece a escrever</a>
+            </div>
+        </div>
+        <div class="topo-imagem">
+            <img src="src/assets/imgs/fundo-topo.png" alt="">
+        </div>
     </div>
 </body>
 
