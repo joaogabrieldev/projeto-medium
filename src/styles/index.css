@@ -258,6 +258,7 @@ a:visited {
 .link-profile:visited {
   width: max-content;
   text-decoration: none;
+  color: black;
 }
 
 .link-profile::after {
